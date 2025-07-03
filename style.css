@@ -291,12 +291,14 @@ footer {
   text-align: center;
   padding: 2rem 1rem;
   margin-top: 3rem;
+  padding-bottom: 100px;
 }
 
 .social-icons a {
   margin: 0 0.5rem;
-  color: #fff;
+  color: var(--theme-color);
   font-weight: 500;
+
 }
 
 @media screen and (min-width: 768px) {

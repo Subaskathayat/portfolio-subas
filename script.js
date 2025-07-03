@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
   }
 });
 
-//for form
+//for form formspee
 document.getElementById("contactForm").addEventListener("submit", async function (e) {
   e.preventDefault();
 
