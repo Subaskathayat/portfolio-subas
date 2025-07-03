@@ -315,3 +315,64 @@ footer {
     width: 45%;
   }
 }
+
+
+.contact-section {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #0c1f3f;
+}
+
+form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #0c1f3f;
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1.5px solid #0c1f3f;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1e3a8a;
+}
+
+form button {
+  background-color: #002c5c;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+form button:hover {
+  background-color: #004080;
+}
+
+#formStatus {
+  margin-top: 15px;
+  font-weight: 500;
+}
+
