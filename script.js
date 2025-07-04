@@ -45,3 +45,29 @@ document.getElementById("contactForm").addEventListener("submit", async function
   }
 });
 
+
+//video
+
+const modal = document.getElementById("videoModal");
+const openBtn = document.getElementById("openVideoModal");
+const closeBtn = document.querySelector(".close");
+const iframe = document.getElementById("videoIframe");
+const videoURL = "https://www.youtube.com/embed/FV3dqzQU9pw?si=Alu6U93saISSOono&autoplay=1";
+
+openBtn.onclick = function () {
+  modal.style.display = "block";
+  iframe.src = videoURL;
+}
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+  iframe.src = "";
+}
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+    iframe.src = "";
+  }
+}
+
