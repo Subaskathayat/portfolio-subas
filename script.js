@@ -52,7 +52,8 @@ const modal = document.getElementById("videoModal");
 const openBtn = document.getElementById("openVideoModal");
 const closeBtn = document.querySelector(".close");
 const iframe = document.getElementById("videoIframe");
-const videoURL = "https://www.youtube.com/embed/FV3dqzQU9pw?si=Alu6U93saISSOono&autoplay=1";
+const videoURL = "https://www.youtube.com/embed/diy_EamiRnc?si=UxdZYisKZXKYY5YB&autoplay=1";
+
 
 openBtn.onclick = function () {
   modal.style.display = "block";

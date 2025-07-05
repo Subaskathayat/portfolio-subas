@@ -16,7 +16,7 @@ body {
   background-color: var(--light-bg);
   color: var(--dark-text);
   line-height: 1.6;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 a {
@@ -130,6 +130,11 @@ a {
 .nav-links li a {
   font-weight: 600;
   color: #333;
+}
+
+section{
+  position: relative;
+  overflow-x: clip;
 }
 
 .section-title {
@@ -294,6 +299,7 @@ footer {
   padding: 2rem 1rem;
   margin-top: 3rem;
   padding-bottom: 100px;
+  overflow-x: hidden;
 }
 
 .social-icons a {
@@ -410,8 +416,8 @@ form button:hover {
 .close {
   color: #fff;
   position: absolute;
-  top: -12px;
-  right: -24px;
+  top: -32px;
+  right: -2px;
   font-size: 28px;
   font-weight: bold;
   cursor: pointer;
