@@ -116,7 +116,7 @@ window.onclick = function (event) {
       if (charIndex < currentText.length) {
 element.innerHTML = escapeHTML(currentText.slice(0, charIndex + 1)) + '<span class="cursor">|</span>';
         charIndex++;
-        setTimeout(type, 200); // Typing speed
+        setTimeout(type, 190); // Typing speed
       } else {
         typing = false;
         setTimeout(type, 1000); // Pause before deleting
@@ -125,7 +125,7 @@ element.innerHTML = escapeHTML(currentText.slice(0, charIndex + 1)) + '<span cla
       if (charIndex > 0) {
 element.innerHTML = escapeHTML(currentText.slice(0, charIndex + 1)) + '<span class="cursor">|</span>';
         charIndex--;
-        setTimeout(type, 200); // Deleting speed
+        setTimeout(type, 190); // Deleting speed
       } else {
         typing = true;
         textIndex = (textIndex + 1) % texts.length;
