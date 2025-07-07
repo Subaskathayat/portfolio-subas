@@ -72,3 +72,66 @@ window.onclick = function (event) {
   }
 }
 
+// for </> text typing animationnn
+
+  const element = document.getElementById("typewriter");
+  const texts = [
+  "<Hello>",
+  "</Namaste>",        // Nepali
+  "</Hola>",           // Spanish
+  "</Bonjour>",        // French
+  "</Konnichiwa>",     // Japanese
+  "</Ciao>",           // Italian
+  "</Hallo>",          // German
+  "</Olá>",            // Portuguese (with accent)
+  "</Salam>",          // Persian/Arabic greeting
+  "</Nǐ hǎo>",         // Chinese (Mandarin)
+  "</Annyeong>",       // Korean
+  "</Sawasdee>",       // Thai
+  "</Merhaba>",        // Turkish
+  "</Zdravstvuyte>",   // Russian
+  "</Shalom>",         // Hebrew
+  "</Halo>",           // Indonesian
+  "</Hej>",            // Swedish
+  "</Selam>",          // Somali
+  "</Yassou>"          // Greek
+];
+
+  let textIndex = 0;
+  let charIndex = 0;
+  let typing = true;
+
+  function escapeHTML(text) {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+
+  function type() {
+    const currentText = texts[textIndex];
+
+    if (typing) {
+      if (charIndex < currentText.length) {
+element.innerHTML = escapeHTML(currentText.slice(0, charIndex + 1)) + '<span class="cursor">|</span>';
+        charIndex++;
+        setTimeout(type, 200); // Typing speed
+      } else {
+        typing = false;
+        setTimeout(type, 1000); // Pause before deleting
+      }
+    } else {
+      if (charIndex > 0) {
+element.innerHTML = escapeHTML(currentText.slice(0, charIndex + 1)) + '<span class="cursor">|</span>';
+        charIndex--;
+        setTimeout(type, 200); // Deleting speed
+      } else {
+        typing = true;
+        textIndex = (textIndex + 1) % texts.length;
+        setTimeout(type, 300); // Pause before typing next
+      }
+    }
+  }
+
+  type();
