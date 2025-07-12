@@ -124,7 +124,7 @@ a {
   list-style: none;
   display: flex;
  
-  gap: .6rem;
+  gap: .65rem;
 }
 
 .nav-links li a {
